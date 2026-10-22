@@ -2,10 +2,14 @@
 import json
 from pathlib import Path
 from html import escape as e
+from hashlib import sha256
 
 ROOT = Path(__file__).resolve().parent
 data = json.loads((ROOT / 'content.json').read_text(encoding='utf-8'))
 URL = 'https://hyy2566.github.io/icra-workshop-6th-sai-2027/'
+
+def versioned(name):
+    return f"{name}?v={sha256((ROOT / name).read_bytes()).hexdigest()[:10]}"
 
 def speaker_card(s):
     photo = f'<img class="speaker-photo" src="{e(s["image"])}" alt="{e(s["name"])}" width="360" height="360" loading="lazy">'
@@ -46,7 +50,7 @@ html = f'''<!doctype html>
 <meta property="og:type" content="website"><meta property="og:title" content="6th Sensorimotor-Augmented Interaction · ICRA 2027"><meta property="og:description" content="Evaluating Adaptive Assistance through Digital Twins and Human Agency. Proposed full-day workshop, Seoul, May 2027."><meta property="og:url" content="{URL}">
 <meta property="og:image" content="{URL}assets/hero-interaction-v2.webp"><meta property="og:image:alt" content="Conceptual illustration of human and robotic hands interacting through a digital twin">
 <link rel="preload" href="assets/fonts/manrope-500.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="assets/hero-interaction-v2.webp" as="image">
-<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="design.css"><script src="site.js" defer></script><noscript><style>.menu-toggle{{display:none}}@media(max-width:800px){{.site-header{{height:auto;position:static}}.header-inner{{flex-wrap:wrap;padding-block:18px}}.nav{{display:flex;position:static;padding:0;border:0}}}}</style></noscript></head>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="{versioned('design.css')}"><script src="{versioned('site.js')}" defer></script><noscript><style>.menu-toggle{{display:none}}@media(max-width:800px){{.site-header{{height:auto;position:static}}.header-inner{{flex-wrap:wrap;padding-block:18px}}.nav{{display:flex;position:static;padding:0;border:0}}}}</style></noscript></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="#home" aria-label="6th Sensorimotor-Augmented Interaction home"><span class="brand-mark">6</span><span class="brand-text">Sensorimotor Interaction<small>ICRA 2027 · SEOUL</small></span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu +</button>

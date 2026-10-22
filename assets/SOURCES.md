@@ -1,4 +1,12 @@
-# Portrait sources
+# Visual assets
+
+## Original hero artwork and typography
+
+`hero-interaction-v2.webp` is an original AI-generated conceptual illustration of human agency and robotic assistance, generated with the built-in image generation tool. It is not a documentary photograph or an image of a specific research result. The generation prompt is recorded in `HERO_PROMPT.txt`.
+
+Manrope font files are served locally from `fonts/`. Source: Google Fonts (https://fonts.google.com/specimen/Manrope). License: `fonts/OFL.txt` (SIL Open Font License).
+
+## Speaker photographs
 
 Speaker portraits are from the official profile, laboratory or prior workshop pages linked on the site. Images remain the property of their respective owners. Local copies are used for workshop speaker identification.
 

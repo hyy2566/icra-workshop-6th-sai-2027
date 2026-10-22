@@ -12,7 +12,10 @@ This is a proposed workshop, subject to ICRA 2027 acceptance. The workshop day, 
 
 - `content.json`: speaker profiles, organizers, contact emails, schedule and previous editions.
 - `build.py`: static page template and editorial text.
-- `style.css` and `site.js`: presentation and navigation.
+- `style.css`: base layout and print fallback.
+- `design.css`: current visual design, responsive presentation and locally hosted Manrope font.
+- `site.js`: mobile navigation and active-section highlighting.
+- `assets/hero-interaction-v2.webp`: original conceptual hero illustration (not a photograph of workshop research).
 - `assets/people/`: public speaker portraits; attribution in `assets/SOURCES.md`.
 
 After editing `content.json` or `build.py`, run `python build.py`. Preview with `python -m http.server 8767`. No build tools or third-party JavaScript packages are required. GitHub Pages publishes `main` at the repository root. `.nojekyll` preserves the static files as authored.
@@ -26,4 +29,4 @@ All assets are local. Page content and links remain accessible without JavaScrip
 - [ICRA workshop call](https://2027.ieee-icra.org/contribute/call-for-workshop-and-tutorial/) for possible workshop dates and acceptance status.
 - Speaker links point to their university or laboratory profiles.
 
-The website does not reproduce private invitation correspondence or reviewer comments. Prior-year submissions, meeting links and sponsors are not carried into this edition. The illustrative hero diagram was created for this site; portraits remain the property of their respective owners.
+The website does not reproduce private invitation correspondence or reviewer comments. Prior-year submissions, meeting links and sponsors are not carried into this edition. The conceptual hero artwork was generated specifically for this site with the built-in image generation tool. Portraits remain the property of their respective owners. Manrope is locally hosted under the SIL Open Font License in `assets/fonts/OFL.txt`.

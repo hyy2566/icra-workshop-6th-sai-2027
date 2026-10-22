@@ -13,10 +13,10 @@ def speaker_card(s):
         initials = ''.join(n[0] for n in s['name'].split()[:2])
         photo = f'<div class="profile-placeholder" aria-hidden="true">{e(initials)}</div>'
     return f'''<article class="speaker" id="speaker-{s['id']}">
-    <a href="{e(s['url'])}" target="_blank" rel="noopener noreferrer" aria-label="{e(s['name'])}: official profile (opens in a new tab)">{photo}</a>
-    <h3><a href="{e(s['url'])}" target="_blank" rel="noopener noreferrer">{e(s['name'])}<span class="arrow" aria-hidden="true">↗</span></a></h3>
+    <a class="speaker-portrait" href="{e(s['url'])}" target="_blank" rel="noopener noreferrer" aria-label="{e(s['name'])}: official profile (opens in a new tab)">{photo}</a><div class="speaker-info">
+    <h3><a href="{e(s['url'])}" target="_blank" rel="noopener noreferrer">{e(s['name'])}</a></h3>
     <p class="affiliation">{e(s['affiliation'])}</p><p class="country">{e(s['country'])}</p>
-    <p class="talk">Invited talk with Q&amp;A<br>Title to be announced</p></article>'''
+    <p class="talk">Invited talk with Q&amp;A<br><span>Title to be announced</span></p></div></article>'''
 
 def schedule(session, title, anchor):
     rows = []
@@ -33,61 +33,34 @@ for person in data['organizers']:
 
 editions = ''.join(f'''<a class="edition" href="{e(r['url'])}" target="_blank" rel="noopener noreferrer"><span class="edition-no">{r['edition']}</span><span class="year">{r['year']}<small>{r['conference']}</small></span><strong>{e(r['title'])}</strong><span class="arrow" aria-hidden="true">↗</span></a>''' for r in data['editions'])
 
-hero_svg = '''<svg viewBox="0 0 520 450" role="img" aria-labelledby="diagram-title diagram-description" xmlns="http://www.w3.org/2000/svg">
-<title id="diagram-title">Connecting robot assistance, digital twins and human agency</title>
-<desc id="diagram-description">A robot arm and its dashed digital twin are connected to a human operator. Evaluation links model predictions, physical outcomes and operator experience.</desc>
-<defs><pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M 28 0 L 0 0 0 28" fill="none" stroke="#34505e" stroke-width=".6"/></pattern><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4ece8"/><stop offset="1" stop-color="#7c9a9e"/></linearGradient></defs>
-<rect x="25" y="20" width="470" height="402" fill="url(#grid)"/>
-<circle cx="270" cy="224" r="155" fill="none" stroke="#46616e" stroke-dasharray="3 9"/><circle cx="270" cy="224" r="111" fill="none" stroke="#34505e"/>
-<path d="M91 332 L182 176 L299 202 L344 268" fill="none" stroke="#7edbcc" stroke-width="22" stroke-linejoin="round" opacity=".12"/>
-<path d="M91 332 L182 176 L299 202 L344 268" fill="none" stroke="#7edbcc" stroke-width="2" stroke-dasharray="7 6"/>
-<circle cx="182" cy="176" r="20" fill="#102c3b" stroke="#7edbcc" stroke-width="1.5" stroke-dasharray="5 4"/><circle cx="299" cy="202" r="14" fill="#102c3b" stroke="#7edbcc" stroke-width="1.5" stroke-dasharray="4 3"/>
-<path d="M103 337 L174 202 L278 229 L308 287" fill="none" stroke="#66838d" stroke-width="34" stroke-linejoin="round"/>
-<path d="M103 337 L174 202 L278 229 L308 287" fill="none" stroke="url(#metal)" stroke-width="23" stroke-linejoin="round"/>
-<circle cx="174" cy="202" r="22" fill="#193e4e" stroke="#d2e3dd" stroke-width="5"/><circle cx="174" cy="202" r="7" fill="#7edbcc"/><circle cx="278" cy="229" r="17" fill="#193e4e" stroke="#d2e3dd" stroke-width="4"/><circle cx="278" cy="229" r="5" fill="#7edbcc"/>
-<path d="M297 287 L295 310 L311 322 M319 277 L334 295 L330 314" fill="none" stroke="#d5e6df" stroke-width="7" stroke-linecap="round"/>
-<path d="M68 359 L139 359 L129 337 L80 337 Z" fill="url(#metal)"/><path d="M56 366 H151" stroke="#d4e5de" stroke-width="3"/>
-<path d="M284 349 L313 334 L342 350 L313 367 Z M284 349 V377 L313 393 V367 M342 350 V378 L313 393" fill="none" stroke="#fa8a70" stroke-width="2"/>
-<path d="M359 145 C374 126 397 120 418 131 C440 143 443 173 429 189 L426 208 M361 146 C347 165 351 181 361 194 L366 214 M356 232 C379 213 414 212 436 232" fill="none" stroke="#f4ad91" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M375 149 C389 137 414 141 421 155 M376 160 H401 M380 176 C389 181 400 181 410 173" fill="none" stroke="#f4ad91" stroke-width="1.3"/>
-<path d="M420 276 C415 281 407 290 405 303 L397 322 C390 335 391 351 401 356 C411 361 421 352 428 341 L444 314" fill="none" stroke="#f4ad91" stroke-width="2"/>
-<path d="M405 303 L401 280 C400 273 408 272 411 277 L419 296 L440 270 C445 264 452 269 448 275 L432 301 M442 290 L458 277 C464 273 469 279 463 285 L446 302 M453 299 L466 290 C471 287 475 294 470 298 L452 316" fill="none" stroke="#f4ad91" stroke-width="2" stroke-linecap="round"/>
-<path d="M343 235 C355 251 360 273 357 293" fill="none" stroke="#7edbcc" stroke-width="1.5" stroke-dasharray="4 5"/>
-<path d="M357 293 L353 284 M357 293 L363 286" fill="none" stroke="#7edbcc" stroke-width="1.5"/>
-<circle cx="332" cy="112" r="4" fill="#7edbcc"/><path d="M328 112 H253 L228 141" fill="none" stroke="#7edbcc" stroke-width="1"/><text x="86" y="99" fill="#a7ddd1" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">DIGITAL TWIN</text><path d="M94 109 H207 L220 143" stroke="#7edbcc" fill="none" stroke-width="1"/>
-<text x="43" y="407" fill="#c4d7d9" font-family="Arial,sans-serif" font-size="10" letter-spacing="1">PHYSICAL OUTCOMES</text>
-<text x="339" y="99" fill="#ffc5ae" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">HUMAN AGENCY</text>
-<rect x="36" y="139" width="108" height="29" rx="14" fill="#1d4553" stroke="#4c797c"/><text x="90" y="158" text-anchor="middle" fill="#c9ede5" font-family="Arial,sans-serif" font-size="10">Predict · Compare</text>
-<rect x="348" y="376" width="138" height="29" rx="14" fill="#4a4341" stroke="#8a6659"/><text x="417" y="395" text-anchor="middle" fill="#f7d2c2" font-family="Arial,sans-serif" font-size="10">Understand · Override</text>
-</svg>'''
-
 html = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(data['title'])} | ICRA 2027 Workshop Proposal</title>
 <meta name="description" content="Proposed ICRA 2027 workshop in Seoul on evaluating adaptive robotic assistance through digital twins and human agency. Speakers, tentative programme, contribution plans and organizers.">
-<meta name="theme-color" content="#102c3b"><link rel="canonical" href="{URL}"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#081824"><link rel="canonical" href="{URL}"><link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website"><meta property="og:title" content="6th Sensorimotor-Augmented Interaction · ICRA 2027"><meta property="og:description" content="Evaluating Adaptive Assistance through Digital Twins and Human Agency. Proposed full-day workshop, Seoul, May 2027."><meta property="og:url" content="{URL}">
-<link rel="stylesheet" href="style.css"><script src="site.js" defer></script><noscript><style>.menu-toggle{{display:none}}@media(max-width:800px){{.site-header{{height:auto;position:static}}.header-inner{{flex-wrap:wrap;padding-block:18px}}.nav{{display:flex;position:static;padding:0;border:0}}}}</style></noscript></head>
+<meta property="og:image" content="{URL}assets/hero-interaction-v2.webp"><meta property="og:image:alt" content="Conceptual illustration of human and robotic hands interacting through a digital twin">
+<link rel="preload" href="assets/fonts/manrope-500.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="assets/hero-interaction-v2.webp" as="image">
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="design.css"><script src="site.js" defer></script><noscript><style>.menu-toggle{{display:none}}@media(max-width:800px){{.site-header{{height:auto;position:static}}.header-inner{{flex-wrap:wrap;padding-block:18px}}.nav{{display:flex;position:static;padding:0;border:0}}}}</style></noscript></head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="#home" aria-label="6th Sensorimotor-Augmented Interaction home"><span class="brand-mark">6</span><span class="brand-text">Sensorimotor Interaction<small>ICRA 2027 · SEOUL</small></span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu +</button>
 <nav class="nav" id="main-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#speakers">Speakers</a><a href="#programme">Programme</a><a href="#contribute">Contribute</a><a href="#organizers">Organizers</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></div></header>
 <main id="main">
-<section class="hero" id="home"><div class="wrap"><div class="hero-grid"><div>
-<span class="eyebrow hero-kicker">Sixth edition · Proposed ICRA 2027 workshop</span>
-<h1><span>Sensorimotor-</span><span>Augmented</span><span>Interaction.</span></h1>
+<section class="hero" id="home"><div class="hero-art"><img src="assets/hero-interaction-v2.webp" width="1672" height="941" alt="Conceptual illustration: a human hand and a robotic hand approaching a translucent digital twin" fetchpriority="high"></div><div class="wrap hero-main"><div class="hero-copy">
+<span class="eyebrow hero-kicker"><span class="edition-pill">6th edition</span> ICRA 2027 · Seoul, Korea</span>
+<h1><span>Sensorimotor-</span><span>Augmented</span><span class="hero-emphasis">Interaction.</span></h1>
 <p class="subtitle">Evaluating Adaptive Assistance through Digital Twins and Human Agency</p>
 <p class="intro">When should robotic assistance act, ask, or yield? Bringing physical performance and the operator’s experience into the same conversation.</p>
-<div class="actions"><a class="button primary" href="#programme">Explore the programme <span aria-hidden="true">↘</span></a><a class="button secondary" href="#contribute">Contribution plans <span aria-hidden="true">↗</span></a></div></div>
-<div class="hero-visual"><div class="visual-top"><span>Human ↔ Robot</span><span>Evaluation in the loop</span></div>{hero_svg}<div class="visual-bottom"><span class="visual-dot" aria-hidden="true"></span>Connecting model predictions, physical outcomes<br>and operator experience.</div></div></div>
-<div class="event-strip"><div><strong>Seoul, Republic of Korea</strong><small>ICRA 2027 · Coex Convention &amp; Exhibition Center</small></div><div><strong>May 24 or 28, 2027</strong><small>Proposed full-day format · Workshop day and room to be confirmed</small></div><div class="status-cell"><span class="pill">Proposal stage</span><small>Subject to conference acceptance.<br><a href="https://2027.ieee-icra.org/contribute/call-for-workshop-and-tutorial/" target="_blank" rel="noopener noreferrer">Official workshop information ↗</a></small></div></div></div></section>
+<div class="actions"><a class="button primary" href="#programme">Explore the programme <span aria-hidden="true">↗</span></a><a class="button secondary" href="#speakers">Meet the speakers <span aria-hidden="true">↗</span></a></div></div><div class="hero-caption">Physical intelligence.<br>Human agency.</div></div>
+<div class="event-band"><div class="wrap event-strip"><div><span class="event-label">The setting</span><strong>Seoul, Republic of Korea</strong><small>Coex Convention &amp; Exhibition Center</small></div><div><span class="event-label">The date</span><strong>May 24 or 28, 2027</strong><small>Proposed full day · Workshop day and room to be confirmed</small></div><div class="status-cell"><span class="pill">Proposal stage</span><small>Subject to conference acceptance.<br><a href="https://2027.ieee-icra.org/contribute/call-for-workshop-and-tutorial/" target="_blank" rel="noopener noreferrer">Official workshop information ↗</a></small></div></div></div></section>
 
 <section class="section" id="about"><div class="wrap"><div class="section-head"><div><span class="eyebrow">01 / The shared question</span><h2>Better assistance.<br>Meaningful human control.</h2></div><p>Adaptive assistance brings together sensing, robot control and human judgment. This edition focuses on how to evaluate the decisions between them in contact-rich teleoperation and physical human–robot interaction.</p></div>
 <div class="question-panel"><div><p class="big-question">How should we evaluate assistance when model predictions, physical outcomes and the operator’s experience do not align?</p><div class="topic-tags"><span>Shared autonomy</span><span>Digital twins</span><span>Human agency</span><span>Teleoperation</span><span>Physical HRI</span></div></div>
 <ol class="questions"><li><span class="num">01</span><div><strong>Recognise uncertainty.</strong><p>Separate degraded sensing, model mismatch and uncertainty about human intent.</p></div></li><li><span class="num">02</span><div><strong>Make assistance understandable.</strong><p>Define when to intervene, request clarification or return control, and what feedback the operator needs.</p></div></li><li><span class="num">03</span><div><strong>Connect claims with evidence.</strong><p>Evaluate physical outcomes alongside agency, understanding and workload, using appropriate evidence for each.</p></div></li></ol></div></div></section>
 
 <section class="section speakers-section" id="speakers"><div class="wrap"><div class="section-head"><div><span class="eyebrow">02 / Invited speakers</span><h2>Seven perspectives.<br>One shared discussion.</h2></div><p>The following speakers have accepted invitations for the proposed workshop. Talk titles, abstracts, order and participation modes will be announced as the programme develops.</p></div>
-<div class="speaker-grid">{''.join(speaker_card(s) for s in data['speakers'])}<aside class="speaker-note"><span class="large">Control.<br>Learning.<br>Interaction.</span><p>Invited talks with Q&amp;A will connect research perspectives with the workshop’s evaluation questions.</p></aside></div>
+<div class="speaker-grid">{''.join(speaker_card(s) for s in data['speakers'])}<aside class="speaker-note"><span class="eyebrow">Ideas in conversation</span><span class="large">07</span><p>Invited speakers bringing together control, learning and human–robot interaction.</p></aside></div>
 <p class="footnote">Speaker profiles open in a new tab.</p></div></section>
 
 <section class="section" id="programme"><div class="wrap"><div class="section-head"><div><span class="eyebrow">03 / Tentative programme</span><h2>A day built<br>for participation.</h2></div><p>Invited talks and contributions set up an extended afternoon of group work. Dedicated discussion, review and synthesis sessions lead to a draft evaluation framework.</p></div>

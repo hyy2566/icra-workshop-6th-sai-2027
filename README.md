@@ -10,11 +10,12 @@ This is a proposed workshop, subject to ICRA 2027 acceptance. The workshop day, 
 
 ## Edit and publish
 
-- `content.json`: speaker profiles, organizers, contact emails, schedule and previous editions.
+- `content.json`: speaker profiles, organizers, contact emails, schedule, previous editions and group photo gallery.
 - `build.py`: static page template and editorial text.
 - `style.css`: base layout and print fallback.
 - `design.css`: current visual design, responsive presentation and locally hosted Manrope font.
-- `site.js`: mobile navigation and active-section highlighting.
+- `site.js`: mobile navigation, active-section highlighting and an accessible full-size photograph viewer.
+- `assets/gallery/`: five historical group photographs reused from the IROS 2026 website, excluding any 2026 group photo.
 - `assets/hero-interaction-v2.webp`: original conceptual hero illustration (not a photograph of workshop research).
 - `assets/people/`: public speaker portraits; attribution in `assets/SOURCES.md`.
 

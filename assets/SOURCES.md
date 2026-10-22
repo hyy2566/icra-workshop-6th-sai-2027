@@ -6,7 +6,19 @@
 
 Manrope font files are served locally from `fonts/`. Source: Google Fonts (https://fonts.google.com/specimen/Manrope). License: `fonts/OFL.txt` (SIL Open Font License).
 
-## Speaker photographs
+## Previous workshop group photographs
+
+Five JPEG photographs in `gallery/` were extracted byte-for-byte from the public IROS 2026 workshop gallery on 2026-10-23: https://hyy2566.github.io/iros-workshop-5th-sat-2026/
+
+- `icra-2024.jpg`: ICRA 2024, Yokohama, Japan.
+- `iros-2024.jpg`: IROS 2024, Abu Dhabi, UAE.
+- `icra-2025.jpg`: ICRA 2025, Atlanta, USA.
+- `iros-2025.jpg`: IROS 2025, Hangzhou, China.
+- `humanoids-2024-2025.jpg`: labelled "Humanoids 2024 & 2025" in the source gallery; the existing series label is retained.
+
+No 2026 group photograph is included. The originals are retained without pixel alterations; page frames use `object-fit: contain`, and the viewer displays the full image.
+
+## Speaker portrait sources
 
 Speaker portraits are from the official profile, laboratory or prior workshop pages linked on the site. Images remain the property of their respective owners. Local copies are used for workshop speaker identification.
 

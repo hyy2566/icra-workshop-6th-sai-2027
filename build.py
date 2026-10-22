@@ -33,6 +33,11 @@ for person in data['organizers']:
 
 editions = ''.join(f'''<a class="edition" href="{e(r['url'])}" target="_blank" rel="noopener noreferrer"><span class="edition-no">{r['edition']}</span><span class="year">{r['year']}<small>{r['conference']}</small></span><strong>{e(r['title'])}</strong><span class="arrow" aria-hidden="true">↗</span></a>''' for r in data['editions'])
 
+gallery = []
+for item in data.get('gallery', []):
+    caption = f"{item['event']} · {item['location']}"
+    gallery.append(f'''<figure class="gallery-item"><a class="gallery-open" href="{e(item['image'])}" target="_blank" rel="noopener" data-caption="{e(caption)}" aria-label="View {e(item['event'])} group photograph at full size"><img src="{e(item['image'])}" width="{item['width']}" height="{item['height']}" alt="Group photograph from {e(item['event'])}" loading="lazy" decoding="async"><span class="gallery-zoom" aria-hidden="true">↗</span></a><figcaption><div class="gallery-caption-top"><h3>{e(item['event'])}</h3><span>{e(item['location'])}</span></div><p>{e(item['title'])}</p><a class="gallery-event-link" href="{e(item['url'])}" target="_blank" rel="noopener noreferrer">Workshop website ↗</a></figcaption></figure>''')
+
 html = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(data['title'])} | ICRA 2027 Workshop Proposal</title>
@@ -45,7 +50,7 @@ html = f'''<!doctype html>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="#home" aria-label="6th Sensorimotor-Augmented Interaction home"><span class="brand-mark">6</span><span class="brand-text">Sensorimotor Interaction<small>ICRA 2027 · SEOUL</small></span></a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu +</button>
-<nav class="nav" id="main-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#speakers">Speakers</a><a href="#programme">Programme</a><a href="#contribute">Contribute</a><a href="#organizers">Organizers</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></div></header>
+<nav class="nav" id="main-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#speakers">Speakers</a><a href="#programme">Programme</a><a href="#contribute">Contribute</a><a href="#organizers">Organizers</a><a href="#gallery">Gallery</a><a class="nav-contact" href="#contact">Contact ↗</a></nav></div></header>
 <main id="main">
 <section class="hero" id="home"><div class="hero-art"><img src="assets/hero-interaction-v2.webp" width="1672" height="941" alt="Conceptual illustration: a human hand and a robotic hand approaching a translucent digital twin" fetchpriority="high"></div><div class="wrap hero-main"><div class="hero-copy">
 <span class="eyebrow hero-kicker"><span class="edition-pill">6th edition</span> ICRA 2027 · Seoul, Korea</span>
@@ -84,6 +89,9 @@ html = f'''<!doctype html>
 <section class="section" id="organizers"><div class="wrap"><div class="section-head"><div><span class="eyebrow">07 / Organizing team</span><h2>Connecting disciplines<br>and communities.</h2></div><p>The proposed team brings together expertise in interaction control, teleoperation, haptics, wearable assistance, robot learning, and physical and social HRI.</p></div><div class="organizer-grid">{''.join(organizers)}</div></div></section>
 
 <section class="section previous-section" id="previous"><div class="wrap"><div class="section-head"><div><span class="eyebrow">08 / Previous editions</span><h2>A continuing conversation.</h2></div><p>Building on five workshops across ICRA and IROS, the sixth edition focuses on connecting model uncertainty, physical performance and human agency through shared evaluation questions.</p></div><div>{editions}</div></div></section>
+
+<section class="section gallery-section" id="gallery"><div class="wrap"><div class="section-head"><div><span class="eyebrow">09 / Workshop gallery</span><h2>From our previous<br>workshops.</h2></div><p>Group photographs from our ICRA, IROS and related Humanoids workshops. Select a photograph to view it at full size.</p></div><div class="gallery-grid">{''.join(gallery)}</div></div></section>
+<dialog class="photo-dialog" aria-labelledby="photo-caption"><div class="photo-viewer"><button class="photo-close" type="button" aria-label="Close photograph" autofocus>×</button><img class="photo-full" alt="Selected workshop group photograph" width="1280" height="719"><div class="photo-controls"><button class="photo-previous" type="button" aria-label="Previous photograph">←</button><div><p id="photo-caption"></p><span class="photo-count" aria-live="polite"></span></div><button class="photo-next" type="button" aria-label="Next photograph">→</button></div></div></dialog>
 
 <section class="contact" id="contact"><div class="wrap contact-inner"><div><span class="eyebrow">Let’s keep the conversation going</span><h2>Questions about<br>the workshop?</h2></div><div><p>For programme, contribution and participation enquiries:</p><p class="contact-name">Dr Ziwei Wang · Lancaster University</p><a class="contact-email" href="mailto:z.wang82@lancaster.ac.uk">z.wang82@lancaster.ac.uk ↗</a><p>Website contact: <a href="mailto:y.he20@lancaster.ac.uk">Yiyang He</a></p></div></div></section>
 </main><footer class="footer"><div class="wrap footer-inner"><p>6th Sensorimotor-Augmented Interaction · Proposed ICRA 2027 workshop</p><p><a href="https://2027.ieee-icra.org/" target="_blank" rel="noopener noreferrer">ICRA 2027 ↗</a> &nbsp; / &nbsp; Updated {data['updated']}</p></div></footer>

@@ -1,0 +1,50 @@
+{
+  "title": "6th Sensorimotor-Augmented Interaction",
+  "subtitle": "Evaluating Adaptive Assistance through Digital Twins and Human Agency",
+  "conference": "ICRA 2027",
+  "status": "Proposed workshop",
+  "updated": "2026-10-23",
+  "speakers": [
+    {"id":"arash","name":"Arash Ajoudani","affiliation":"Istituto Italiano di Tecnologia","country":"Italy","url":"https://www.iit.it/people-details/-/people/arash-ajoudani","image":"assets/people/arash.jpg"},
+    {"id":"monroe","name":"Monroe Kennedy III","affiliation":"Stanford University","country":"United States","url":"https://profiles.stanford.edu/monroe-kennedy","image":"assets/people/monroe.jpg"},
+    {"id":"marta","name":"Marta Lagomarsino","affiliation":"Istituto Italiano di Tecnologia","country":"Italy","url":"https://www.iit.it/it/people-profile/-/people/marta-lagomarsino/","image":"assets/people/marta.jpg"},
+    {"id":"sonia","name":"Sonia Chernova","affiliation":"Georgia Institute of Technology","country":"United States","url":"https://www.cc.gatech.edu/people/sonia-chernova","image":"assets/people/sonia.jpg"},
+    {"id":"dongjun","name":"Dongjun Lee","affiliation":"Seoul National University","country":"Republic of Korea","url":"https://www.inrol.snu.ac.kr/dongjun-lee","image":"assets/people/dongjun.jpg"},
+    {"id":"wansoo","name":"Wansoo Kim","affiliation":"Hanyang University ERICA","country":"Republic of Korea","url":"https://harco.hanyang.ac.kr/team/","image":"assets/people/wansoo.jpg"},
+    {"id":"chenguang","name":"Chenguang Yang","affiliation":"The Hong Kong Polytechnic University","country":"Hong Kong SAR, China","url":"https://www.polyu.edu.hk/comp/people/academic-staff/prof-yang-chenguang-charlie/","image":"assets/people/chenguang.jpg"}
+  ],
+  "organizers": [
+    {"name":"Ziwei Wang","affiliation":"Lancaster University, UK","email":"z.wang82@lancaster.ac.uk","role":"Primary contact"},
+    {"name":"Zhenyu Lu","affiliation":"South China University of Technology, China","email":"luzhenyu@scut.edu.cn"},
+    {"name":"Luka Peternel","affiliation":"Delft University of Technology, Netherlands","email":"L.Peternel@tudelft.nl"},
+    {"name":"Amy Kyungwon Han","affiliation":"Seoul National University, Republic of Korea","email":"amyhan@snu.ac.kr"},
+    {"name":"Parag Khanna","affiliation":"KTH Royal Institute of Technology, Sweden","email":"paragk@kth.se"},
+    {"name":"Yiyang He","affiliation":"Lancaster University, UK","email":"y.he20@lancaster.ac.uk"},
+    {"name":"Angela Faragasso","affiliation":"Temple University Japan Campus, Japan","email":"angela.faragasso@tuj.temple.edu"},
+    {"name":"Eiichi Yoshida","affiliation":"Tokyo University of Science, Japan","email":"eiichi.yoshida@rs.tus.ac.jp"},
+    {"name":"Jee-Hwan Ryu","affiliation":"KAIST, Republic of Korea","email":"jhryu@kaist.ac.kr"},
+    {"name":"Changyun Wen","affiliation":"Affiliation to be confirmed","email":"ecywen@ntu.edu.sg"}
+  ],
+  "programme": [
+    {"start":"08:30","end":"08:45","title":"Opening & shared evaluation questions","detail":"Framing the questions for the day","session":"morning"},
+    {"start":"08:45","end":"09:45","title":"Invited talks · Session I","detail":"Three talks with Q&A; speaker order to be announced","session":"morning"},
+    {"start":"09:45","end":"10:15","title":"Contributed spotlights","detail":"Up to twelve short presentations","session":"morning"},
+    {"start":"10:15","end":"10:45","title":"Posters, demos & coffee","detail":"Discussion with contributing authors","session":"morning","type":"break"},
+    {"start":"10:45","end":"12:05","title":"Invited talks · Session II","detail":"Four talks with Q&A; speaker order to be announced","session":"morning"},
+    {"start":"12:05","end":"12:30","title":"Scenario briefing","detail":"Common situation, questions and discussion materials","session":"morning"},
+    {"start":"12:30","end":"14:00","title":"Lunch break","detail":"General break; no required workshop activity","session":"break","type":"break"},
+    {"start":"14:00","end":"15:30","title":"Facilitated scenario discussion","detail":"Mixed-expertise groups explore uncertainty, assistance and operator control","session":"afternoon","type":"interactive"},
+    {"start":"15:30","end":"16:00","title":"Posters, demos & coffee","detail":"A second opportunity for in-depth exchange","session":"afternoon","type":"break"},
+    {"start":"16:00","end":"16:35","title":"Group reports & cross-group review","detail":"Compare assumptions, evidence and unresolved questions","session":"afternoon","type":"interactive"},
+    {"start":"16:35","end":"17:20","title":"Evaluation protocol synthesis","detail":"Build a shared draft reporting and evaluation framework","session":"afternoon","type":"interactive"},
+    {"start":"17:20","end":"17:50","title":"Panel discussion","detail":"Open questions and directions for subsequent testing","session":"afternoon"},
+    {"start":"17:50","end":"18:00","title":"Closing & next steps","detail":"Summarise the draft and planned follow-up","session":"afternoon"}
+  ],
+  "editions": [
+    {"year":"2026","conference":"IROS","edition":"05","title":"Sensorimotor-Augmented Teleoperation","url":"https://hyy2566.github.io/iros-workshop-5th-sat-2026/"},
+    {"year":"2025","conference":"IROS","edition":"04","title":"Sensorimotor-Augmented Teleoperation","url":"https://sites.google.com/view/iros-workshop-4th-sat-2025"},
+    {"year":"2025","conference":"ICRA","edition":"03","title":"Human-Centric Multilateral Teleoperation","url":"https://sites.google.com/view/icra-2025-workshop/home"},
+    {"year":"2024","conference":"IROS","edition":"02","title":"Multisensory Transparency-Augmented Teleoperation in Extreme Environments","url":"https://sites.google.com/view/iros24-ws-multisensory/home"},
+    {"year":"2024","conference":"ICRA","edition":"01","title":"Human-Centric Multilateral Teleoperation Augmentation","url":"https://sites.google.com/view/humancentricicra2024/home"}
+  ]
+}

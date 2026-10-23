@@ -1,6 +1,6 @@
 {
   "title": "6th Sensorimotor-Augmented Interaction",
-  "subtitle": "Evaluating Adaptive Assistance through Digital Twins and Human Agency",
+  "subtitle": "Human Interaction Oriented Robotics for Real World Deployment",
   "conference": "ICRA 2027",
   "status": "Proposed workshop",
   "updated": "2026-10-23",
@@ -23,22 +23,26 @@
     {"name":"Angela Faragasso","affiliation":"Temple University Japan Campus, Japan","email":"angela.faragasso@tuj.temple.edu"},
     {"name":"Eiichi Yoshida","affiliation":"Tokyo University of Science, Japan","email":"eiichi.yoshida@rs.tus.ac.jp"},
     {"name":"Jee-Hwan Ryu","affiliation":"KAIST, Republic of Korea","email":"jhryu@kaist.ac.kr"},
-    {"name":"Changyun Wen","affiliation":"Affiliation to be confirmed","email":"ecywen@ntu.edu.sg"}
+    {"name":"Changyun Wen","affiliation":"Nanyang Technological University, Singapore","email":"ecywen@ntu.edu.sg"}
   ],
   "programme": [
-    {"start":"08:30","end":"08:45","title":"Opening & shared evaluation questions","detail":"Framing the questions for the day","session":"morning"},
-    {"start":"08:45","end":"09:45","title":"Invited talks · Session I","detail":"Three talks with Q&A; speaker order to be announced","session":"morning"},
-    {"start":"09:45","end":"10:15","title":"Contributed spotlights","detail":"Up to twelve short presentations","session":"morning"},
-    {"start":"10:15","end":"10:45","title":"Posters, demos & coffee","detail":"Discussion with contributing authors","session":"morning","type":"break"},
-    {"start":"10:45","end":"12:05","title":"Invited talks · Session II","detail":"Four talks with Q&A; speaker order to be announced","session":"morning"},
-    {"start":"12:05","end":"12:30","title":"Scenario briefing","detail":"Common situation, questions and discussion materials","session":"morning"},
-    {"start":"12:30","end":"14:00","title":"Lunch break","detail":"General break; no required workshop activity","session":"break","type":"break"},
-    {"start":"14:00","end":"15:30","title":"Facilitated scenario discussion","detail":"Mixed-expertise groups explore uncertainty, assistance and operator control","session":"afternoon","type":"interactive"},
-    {"start":"15:30","end":"16:00","title":"Posters, demos & coffee","detail":"A second opportunity for in-depth exchange","session":"afternoon","type":"break"},
-    {"start":"16:00","end":"16:35","title":"Group reports & cross-group review","detail":"Compare assumptions, evidence and unresolved questions","session":"afternoon","type":"interactive"},
-    {"start":"16:35","end":"17:20","title":"Evaluation protocol synthesis","detail":"Build a shared draft reporting and evaluation framework","session":"afternoon","type":"interactive"},
-    {"start":"17:20","end":"17:50","title":"Panel discussion","detail":"Open questions and directions for subsequent testing","session":"afternoon"},
-    {"start":"17:50","end":"18:00","title":"Closing & next steps","detail":"Summarise the draft and planned follow-up","session":"afternoon"}
+    {"start":"08:30","end":"08:35","title":"Opening remarks","detail":"Organizing team","session":"morning"},
+    {"start":"08:35","end":"09:00","title":"Arash Ajoudani","detail":"Invited talk","speaker":"arash","session":"morning"},
+    {"start":"09:00","end":"09:25","title":"Monroe Kennedy III","detail":"Invited talk","speaker":"monroe","session":"morning"},
+    {"start":"09:25","end":"09:50","title":"Marta Lagomarsino","detail":"Invited talk","speaker":"marta","session":"morning"},
+    {"start":"09:50","end":"10:20","title":"Contributed spotlights","detail":"Up to twelve presentations; questions during the poster sessions","session":"morning"},
+    {"start":"10:20","end":"10:50","title":"Coffee, posters and demos","detail":"","session":"morning","type":"break"},
+    {"start":"10:50","end":"11:15","title":"Sonia Chernova","detail":"Invited talk","speaker":"sonia","session":"morning"},
+    {"start":"11:15","end":"11:40","title":"Dongjun Lee","detail":"Invited talk","speaker":"dongjun","session":"morning"},
+    {"start":"11:40","end":"12:05","title":"Wansoo Kim","detail":"Invited talk","speaker":"wansoo","session":"morning"},
+    {"start":"12:05","end":"12:30","title":"Chenguang Yang","detail":"Invited talk","speaker":"chenguang","session":"morning"},
+    {"start":"12:30","end":"13:30","title":"Lunch break","detail":"General break","session":"break","type":"break"},
+    {"start":"13:30","end":"15:00","title":"Group discussion","detail":"Introduction, discussion in groups and preparation of brief reports","session":"afternoon","type":"interactive"},
+    {"start":"15:00","end":"15:30","title":"Coffee, posters and demos","detail":"","session":"afternoon","type":"break"},
+    {"start":"15:30","end":"16:05","title":"Group reports","detail":"Four five-minute reports followed by open discussion","session":"afternoon","type":"interactive"},
+    {"start":"16:05","end":"16:50","title":"Plenary discussion and summary","detail":"Evaluation considerations and questions for further study","session":"afternoon","type":"interactive"},
+    {"start":"16:50","end":"17:20","title":"Panel discussion","detail":"Research directions and applications; panel membership to be announced","session":"afternoon"},
+    {"start":"17:20","end":"17:30","title":"Closing remarks","detail":"Organizing team","session":"afternoon"}
   ],
   "gallery": [
     {"event":"IROS 2025","year":"2025","location":"Hangzhou, China","title":"4th Sensorimotor-Augmented Teleoperation","image":"assets/gallery/iros-2025.jpg","width":1706,"height":1279,"url":"https://sites.google.com/view/iros-workshop-4th-sat-2025"},

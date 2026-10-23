@@ -2,7 +2,7 @@
 
 ## Original hero artwork and typography
 
-`hero-interaction-v2.webp` is retained from an earlier design and is no longer displayed by the website or its social preview. It was generated with the built-in image generation tool; the original prompt remains in `HERO_PROMPT.txt`. The current introduction and social preview use `gallery/icra-2025.jpg`, labelled as a photograph from the previous ICRA 2025 workshop.
+`hero-interaction-v2.webp` is used as the homepage hero and social preview at the organizer's request. It was generated with the built-in image generation tool; the original prompt remains in `HERO_PROMPT.txt`. It is conceptual artwork, not a photograph of a particular research result. Authentic previous-workshop photographs remain in the gallery.
 
 Manrope font files are served locally from `fonts/`. Source: Google Fonts (https://fonts.google.com/specimen/Manrope). License: `fonts/OFL.txt` (SIL Open Font License).
 

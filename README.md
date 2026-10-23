@@ -16,7 +16,7 @@ This is a proposed workshop, subject to ICRA 2027 acceptance. The workshop day, 
 - `style.css` and `design.css`: retained earlier styles; not loaded by the current page.
 - `site.js`: mobile navigation, active-section highlighting and an accessible full-size photograph viewer.
 - `assets/gallery/`: five historical group photographs reused from the IROS 2026 website, excluding any 2026 group photo.
-- `assets/hero-interaction-v2.webp`: retained earlier conceptual artwork; no longer displayed or used in social previews. The current introduction uses the authentic ICRA 2025 photograph, explicitly labelled as a previous edition.
+- `assets/hero-interaction-v2.webp`: conceptual human–robot hand illustration, restored as the homepage hero and social preview at the organizer's request. The revised proposal text and academic typography remain in use. Authentic group photographs are available in the gallery.
 - `assets/people/`: public speaker portraits; attribution in `assets/SOURCES.md`.
 
 After editing `content.json` or `build.py`, run `python build.py`. Preview with `python -m http.server 8767`. No build tools or third-party JavaScript packages are required. GitHub Pages publishes `main` at the repository root. `.nojekyll` preserves the static files as authored.

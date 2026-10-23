@@ -11,17 +11,18 @@ This is a proposed workshop, subject to ICRA 2027 acceptance. The workshop day, 
 ## Edit and publish
 
 - `content.json`: speaker profiles, organizers, contact emails, schedule, previous editions and group photo gallery.
-- `build.py`: static page template and editorial text.
+- `build.py`: shared page template and editorial sections. Builds seven independent pages: Home (`index.html`), Speakers, Programme, Contributions, Organizers, Gallery and Contact.
 - `academic.css`: current page design, responsive layout, print rules and locally hosted Manrope font.
 - `style.css` and `design.css`: retained earlier styles; not loaded by the current page.
-- `site.js`: mobile navigation, active-section highlighting and an accessible full-size photograph viewer.
+- `site.js`: mobile navigation, redirects from previously shared section links and an accessible full-size photograph viewer. Active-page navigation is rendered in the HTML.
 - `assets/gallery/`: five historical group photographs reused from the IROS 2026 website, excluding any 2026 group photo.
 - `assets/hero-interaction-v2.webp`: conceptual human–robot hand illustration, restored as the homepage hero and social preview at the organizer's request. The revised proposal text and academic typography remain in use. Authentic group photographs are available in the gallery.
 - `assets/people/`: public speaker portraits; attribution in `assets/SOURCES.md`.
+- `assets/organizers/`: ten organizer portraits, including the photograph supplied for Yiyang He on 2026-10-24. Portraits and names link to the corresponding university, laboratory or personal profile.
 
 After editing `content.json` or `build.py`, run `python build.py`. Preview with `python -m http.server 8767`. No build tools or third-party JavaScript packages are required. GitHub Pages publishes `main` at the repository root. `.nojekyll` preserves the static files as authored.
 
-All assets are local. Page content and links remain accessible without JavaScript; JavaScript enhances mobile navigation, active-section highlighting and the photograph viewer. Navigation and layout support keyboard use, reduced motion and mobile screens.
+All assets are local. Each page can be opened directly, refreshed or shared; page content and navigation work without JavaScript. JavaScript enhances mobile navigation and the photograph viewer, and routes old homepage links such as `#organizers` or `#speaker-sonia` to their new pages. Navigation and layout support keyboard use, reduced motion and mobile screens. The homepage retains the hand illustration and workshop overview; the full programme, portraits and gallery are on their own pages.
 
 ## Content basis
 

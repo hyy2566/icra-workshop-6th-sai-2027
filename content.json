@@ -3,59 +3,369 @@
   "subtitle": "Human Interaction Oriented Robotics for Real World Deployment",
   "conference": "ICRA 2027",
   "status": "Proposed workshop",
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "speakers": [
-    {"id":"arash","name":"Arash Ajoudani","affiliation":"Istituto Italiano di Tecnologia","country":"Italy","url":"https://www.iit.it/people-details/-/people/arash-ajoudani","image":"assets/people/arash.jpg"},
-    {"id":"monroe","name":"Monroe Kennedy III","affiliation":"Stanford University","country":"United States","url":"https://profiles.stanford.edu/monroe-kennedy","image":"assets/people/monroe.jpg"},
-    {"id":"marta","name":"Marta Lagomarsino","affiliation":"Istituto Italiano di Tecnologia","country":"Italy","url":"https://www.iit.it/it/people-profile/-/people/marta-lagomarsino/","image":"assets/people/marta.jpg"},
-    {"id":"sonia","name":"Sonia Chernova","affiliation":"Georgia Institute of Technology","country":"United States","url":"https://www.cc.gatech.edu/people/sonia-chernova","image":"assets/people/sonia.jpg"},
-    {"id":"dongjun","name":"Dongjun Lee","affiliation":"Seoul National University","country":"Republic of Korea","url":"https://www.inrol.snu.ac.kr/dongjun-lee","image":"assets/people/dongjun.jpg"},
-    {"id":"wansoo","name":"Wansoo Kim","affiliation":"Hanyang University ERICA","country":"Republic of Korea","url":"https://harco.hanyang.ac.kr/team/","image":"assets/people/wansoo.jpg"},
-    {"id":"chenguang","name":"Chenguang Yang","affiliation":"The Hong Kong Polytechnic University","country":"Hong Kong SAR, China","url":"https://www.polyu.edu.hk/comp/people/academic-staff/prof-yang-chenguang-charlie/","image":"assets/people/chenguang.jpg"}
+    {
+      "id": "arash",
+      "name": "Arash Ajoudani",
+      "affiliation": "Istituto Italiano di Tecnologia",
+      "country": "Italy",
+      "url": "https://www.iit.it/people-details/-/people/arash-ajoudani",
+      "image": "assets/people/arash.jpg"
+    },
+    {
+      "id": "monroe",
+      "name": "Monroe Kennedy III",
+      "affiliation": "Stanford University",
+      "country": "United States",
+      "url": "https://profiles.stanford.edu/monroe-kennedy",
+      "image": "assets/people/monroe.jpg"
+    },
+    {
+      "id": "marta",
+      "name": "Marta Lagomarsino",
+      "affiliation": "Istituto Italiano di Tecnologia",
+      "country": "Italy",
+      "url": "https://www.iit.it/it/people-profile/-/people/marta-lagomarsino/",
+      "image": "assets/people/marta.jpg"
+    },
+    {
+      "id": "sonia",
+      "name": "Sonia Chernova",
+      "affiliation": "Georgia Institute of Technology",
+      "country": "United States",
+      "url": "https://www.cc.gatech.edu/people/sonia-chernova",
+      "image": "assets/people/sonia.jpg"
+    },
+    {
+      "id": "dongjun",
+      "name": "Dongjun Lee",
+      "affiliation": "Seoul National University",
+      "country": "Republic of Korea",
+      "url": "https://www.inrol.snu.ac.kr/dongjun-lee",
+      "image": "assets/people/dongjun.jpg"
+    },
+    {
+      "id": "wansoo",
+      "name": "Wansoo Kim",
+      "affiliation": "Hanyang University ERICA",
+      "country": "Republic of Korea",
+      "url": "https://harco.hanyang.ac.kr/team/",
+      "image": "assets/people/wansoo.jpg"
+    },
+    {
+      "id": "chenguang",
+      "name": "Chenguang Yang",
+      "affiliation": "The Hong Kong Polytechnic University",
+      "country": "Hong Kong SAR, China",
+      "url": "https://www.polyu.edu.hk/comp/people/academic-staff/prof-yang-chenguang-charlie/",
+      "image": "assets/people/chenguang.jpg"
+    }
   ],
   "organizers": [
-    {"name":"Ziwei Wang","affiliation":"Lancaster University, UK","email":"z.wang82@lancaster.ac.uk","role":"Primary contact"},
-    {"name":"Zhenyu Lu","affiliation":"South China University of Technology, China","email":"luzhenyu@scut.edu.cn"},
-    {"name":"Luka Peternel","affiliation":"Delft University of Technology, Netherlands","email":"L.Peternel@tudelft.nl"},
-    {"name":"Amy Kyungwon Han","affiliation":"Seoul National University, Republic of Korea","email":"amyhan@snu.ac.kr"},
-    {"name":"Parag Khanna","affiliation":"KTH Royal Institute of Technology, Sweden","email":"paragk@kth.se"},
-    {"name":"Yiyang He","affiliation":"Lancaster University, UK","email":"y.he20@lancaster.ac.uk"},
-    {"name":"Angela Faragasso","affiliation":"Temple University Japan Campus, Japan","email":"angela.faragasso@tuj.temple.edu"},
-    {"name":"Eiichi Yoshida","affiliation":"Tokyo University of Science, Japan","email":"eiichi.yoshida@rs.tus.ac.jp"},
-    {"name":"Jee-Hwan Ryu","affiliation":"KAIST, Republic of Korea","email":"jhryu@kaist.ac.kr"},
-    {"name":"Changyun Wen","affiliation":"Nanyang Technological University, Singapore","email":"ecywen@ntu.edu.sg"}
+    {
+      "name": "Ziwei Wang",
+      "affiliation": "Lancaster University, UK",
+      "email": "z.wang82@lancaster.ac.uk",
+      "role": "Primary contact",
+      "id": "ziwei-wang",
+      "url": "https://www.lancaster.ac.uk/engineering/about/people/ziwei-wang",
+      "image": "assets/organizers/ziwei-wang.jpg"
+    },
+    {
+      "name": "Zhenyu Lu",
+      "affiliation": "South China University of Technology, China",
+      "email": "luzhenyu@scut.edu.cn",
+      "id": "zhenyu-lu",
+      "url": "https://www.hirobot-lab.cn/teammate/teammate_en.html",
+      "image": "assets/organizers/zhenyu-lu.jpg"
+    },
+    {
+      "name": "Luka Peternel",
+      "affiliation": "Delft University of Technology, Netherlands",
+      "email": "L.Peternel@tudelft.nl",
+      "id": "luka-peternel",
+      "url": "https://www.lukapeternel.nl/",
+      "image": "assets/organizers/luka-peternel.jpg"
+    },
+    {
+      "name": "Amy Kyungwon Han",
+      "affiliation": "Seoul National University, Republic of Korea",
+      "email": "amyhan@snu.ac.kr",
+      "id": "amy-han",
+      "url": "https://hero.snu.ac.kr/people/amyhan",
+      "image": "assets/organizers/amy-han.png"
+    },
+    {
+      "name": "Parag Khanna",
+      "affiliation": "KTH Royal Institute of Technology, Sweden",
+      "email": "paragk@kth.se",
+      "id": "parag-khanna",
+      "url": "https://www.kth.se/profile/paragk",
+      "image": "assets/organizers/parag-khanna.jpg"
+    },
+    {
+      "name": "Yiyang He",
+      "affiliation": "Lancaster University, UK",
+      "email": "y.he20@lancaster.ac.uk",
+      "id": "yiyang-he",
+      "url": "https://www.lancaster.ac.uk/engineering/about/people/yiyang-he",
+      "image": "assets/organizers/yiyang-he.jpg"
+    },
+    {
+      "name": "Angela Faragasso",
+      "affiliation": "Temple University Japan Campus, Japan",
+      "email": "angela.faragasso@tuj.temple.edu",
+      "id": "angela-faragasso",
+      "url": "https://angela-faragasso.com/",
+      "image": "assets/organizers/angela-faragasso.jpg"
+    },
+    {
+      "name": "Eiichi Yoshida",
+      "affiliation": "Tokyo University of Science, Japan",
+      "email": "eiichi.yoshida@rs.tus.ac.jp",
+      "id": "eiichi-yoshida",
+      "url": "https://www.rs.tus.ac.jp/eiichi.yoshida/",
+      "image": "assets/organizers/eiichi-yoshida.jpg"
+    },
+    {
+      "name": "Jee-Hwan Ryu",
+      "affiliation": "KAIST, Republic of Korea",
+      "email": "jhryu@kaist.ac.kr",
+      "id": "jee-hwan-ryu",
+      "url": "https://pure.kaist.ac.kr/en/persons/jee-hwan-ryu/",
+      "image": "assets/organizers/jee-hwan-ryu.jpg"
+    },
+    {
+      "name": "Changyun Wen",
+      "affiliation": "Nanyang Technological University, Singapore",
+      "email": "ecywen@ntu.edu.sg",
+      "id": "changyun-wen",
+      "url": "https://personal.ntu.edu.sg/ecywen/bio.htm",
+      "image": "assets/organizers/changyun-wen.jpg"
+    }
   ],
   "programme": [
-    {"start":"08:30","end":"08:35","title":"Opening remarks","detail":"Organizing team","session":"morning"},
-    {"start":"08:35","end":"09:00","title":"Arash Ajoudani","detail":"Invited talk","speaker":"arash","session":"morning"},
-    {"start":"09:00","end":"09:25","title":"Monroe Kennedy III","detail":"Invited talk","speaker":"monroe","session":"morning"},
-    {"start":"09:25","end":"09:50","title":"Marta Lagomarsino","detail":"Invited talk","speaker":"marta","session":"morning"},
-    {"start":"09:50","end":"10:20","title":"Contributed spotlights","detail":"Up to twelve presentations; questions during the poster sessions","session":"morning"},
-    {"start":"10:20","end":"10:50","title":"Coffee, posters and demos","detail":"","session":"morning","type":"break"},
-    {"start":"10:50","end":"11:15","title":"Sonia Chernova","detail":"Invited talk","speaker":"sonia","session":"morning"},
-    {"start":"11:15","end":"11:40","title":"Dongjun Lee","detail":"Invited talk","speaker":"dongjun","session":"morning"},
-    {"start":"11:40","end":"12:05","title":"Wansoo Kim","detail":"Invited talk","speaker":"wansoo","session":"morning"},
-    {"start":"12:05","end":"12:30","title":"Chenguang Yang","detail":"Invited talk","speaker":"chenguang","session":"morning"},
-    {"start":"12:30","end":"13:30","title":"Lunch break","detail":"General break","session":"break","type":"break"},
-    {"start":"13:30","end":"15:00","title":"Group discussion","detail":"Introduction, discussion in groups and preparation of brief reports","session":"afternoon","type":"interactive"},
-    {"start":"15:00","end":"15:30","title":"Coffee, posters and demos","detail":"","session":"afternoon","type":"break"},
-    {"start":"15:30","end":"16:05","title":"Group reports","detail":"Four five-minute reports followed by open discussion","session":"afternoon","type":"interactive"},
-    {"start":"16:05","end":"16:50","title":"Plenary discussion and summary","detail":"Evaluation considerations and questions for further study","session":"afternoon","type":"interactive"},
-    {"start":"16:50","end":"17:20","title":"Panel discussion","detail":"Research directions and applications; panel membership to be announced","session":"afternoon"},
-    {"start":"17:20","end":"17:30","title":"Closing remarks","detail":"Organizing team","session":"afternoon"}
+    {
+      "start": "08:30",
+      "end": "08:35",
+      "title": "Opening remarks",
+      "detail": "Organizing team",
+      "session": "morning"
+    },
+    {
+      "start": "08:35",
+      "end": "09:00",
+      "title": "Arash Ajoudani",
+      "detail": "Invited talk",
+      "speaker": "arash",
+      "session": "morning"
+    },
+    {
+      "start": "09:00",
+      "end": "09:25",
+      "title": "Monroe Kennedy III",
+      "detail": "Invited talk",
+      "speaker": "monroe",
+      "session": "morning"
+    },
+    {
+      "start": "09:25",
+      "end": "09:50",
+      "title": "Marta Lagomarsino",
+      "detail": "Invited talk",
+      "speaker": "marta",
+      "session": "morning"
+    },
+    {
+      "start": "09:50",
+      "end": "10:20",
+      "title": "Contributed spotlights",
+      "detail": "Up to twelve presentations; questions during the poster sessions",
+      "session": "morning"
+    },
+    {
+      "start": "10:20",
+      "end": "10:50",
+      "title": "Coffee, posters and demos",
+      "detail": "",
+      "session": "morning",
+      "type": "break"
+    },
+    {
+      "start": "10:50",
+      "end": "11:15",
+      "title": "Sonia Chernova",
+      "detail": "Invited talk",
+      "speaker": "sonia",
+      "session": "morning"
+    },
+    {
+      "start": "11:15",
+      "end": "11:40",
+      "title": "Dongjun Lee",
+      "detail": "Invited talk",
+      "speaker": "dongjun",
+      "session": "morning"
+    },
+    {
+      "start": "11:40",
+      "end": "12:05",
+      "title": "Wansoo Kim",
+      "detail": "Invited talk",
+      "speaker": "wansoo",
+      "session": "morning"
+    },
+    {
+      "start": "12:05",
+      "end": "12:30",
+      "title": "Chenguang Yang",
+      "detail": "Invited talk",
+      "speaker": "chenguang",
+      "session": "morning"
+    },
+    {
+      "start": "12:30",
+      "end": "13:30",
+      "title": "Lunch break",
+      "detail": "General break",
+      "session": "break",
+      "type": "break"
+    },
+    {
+      "start": "13:30",
+      "end": "15:00",
+      "title": "Group discussion",
+      "detail": "Introduction, discussion in groups and preparation of brief reports",
+      "session": "afternoon",
+      "type": "interactive"
+    },
+    {
+      "start": "15:00",
+      "end": "15:30",
+      "title": "Coffee, posters and demos",
+      "detail": "",
+      "session": "afternoon",
+      "type": "break"
+    },
+    {
+      "start": "15:30",
+      "end": "16:05",
+      "title": "Group reports",
+      "detail": "Four five-minute reports followed by open discussion",
+      "session": "afternoon",
+      "type": "interactive"
+    },
+    {
+      "start": "16:05",
+      "end": "16:50",
+      "title": "Plenary discussion and summary",
+      "detail": "Evaluation considerations and questions for further study",
+      "session": "afternoon",
+      "type": "interactive"
+    },
+    {
+      "start": "16:50",
+      "end": "17:20",
+      "title": "Panel discussion",
+      "detail": "Research directions and applications; panel membership to be announced",
+      "session": "afternoon"
+    },
+    {
+      "start": "17:20",
+      "end": "17:30",
+      "title": "Closing remarks",
+      "detail": "Organizing team",
+      "session": "afternoon"
+    }
   ],
   "gallery": [
-    {"event":"IROS 2025","year":"2025","location":"Hangzhou, China","title":"4th Sensorimotor-Augmented Teleoperation","image":"assets/gallery/iros-2025.jpg","width":1706,"height":1279,"url":"https://sites.google.com/view/iros-workshop-4th-sat-2025"},
-    {"event":"ICRA 2025","year":"2025","location":"Atlanta, USA","title":"3rd Human-Centric Multilateral Teleoperation Workshop","image":"assets/gallery/icra-2025.jpg","width":1280,"height":719,"url":"https://sites.google.com/view/icra-2025-workshop/home"},
-    {"event":"ICRA 2024","year":"2024","location":"Yokohama, Japan","title":"Human-Centric Multilateral Teleoperation Augmentation","image":"assets/gallery/icra-2024.jpg","width":1280,"height":719,"url":"https://sites.google.com/view/humancentricicra2024/home"},
-    {"event":"IROS 2024","year":"2024","location":"Abu Dhabi, UAE","title":"Multisensory Transparency-Augmented Teleoperation in Extreme Environments","image":"assets/gallery/iros-2024.jpg","width":1280,"height":719,"url":"https://sites.google.com/view/iros24-ws-multisensory/home"},
-    {"event":"Humanoids 2024 & 2025","year":"2024–2025","location":"Related workshop series","title":"Real World Physical and Social Human-Robot Interaction","image":"assets/gallery/humanoids-2024-2025.jpg","width":1280,"height":719,"url":"https://rwhri.github.io/Humanoids2024_workshop/"}
+    {
+      "event": "IROS 2025",
+      "year": "2025",
+      "location": "Hangzhou, China",
+      "title": "4th Sensorimotor-Augmented Teleoperation",
+      "image": "assets/gallery/iros-2025.jpg",
+      "width": 1706,
+      "height": 1279,
+      "url": "https://sites.google.com/view/iros-workshop-4th-sat-2025"
+    },
+    {
+      "event": "ICRA 2025",
+      "year": "2025",
+      "location": "Atlanta, USA",
+      "title": "3rd Human-Centric Multilateral Teleoperation Workshop",
+      "image": "assets/gallery/icra-2025.jpg",
+      "width": 1280,
+      "height": 719,
+      "url": "https://sites.google.com/view/icra-2025-workshop/home"
+    },
+    {
+      "event": "ICRA 2024",
+      "year": "2024",
+      "location": "Yokohama, Japan",
+      "title": "Human-Centric Multilateral Teleoperation Augmentation",
+      "image": "assets/gallery/icra-2024.jpg",
+      "width": 1280,
+      "height": 719,
+      "url": "https://sites.google.com/view/humancentricicra2024/home"
+    },
+    {
+      "event": "IROS 2024",
+      "year": "2024",
+      "location": "Abu Dhabi, UAE",
+      "title": "Multisensory Transparency-Augmented Teleoperation in Extreme Environments",
+      "image": "assets/gallery/iros-2024.jpg",
+      "width": 1280,
+      "height": 719,
+      "url": "https://sites.google.com/view/iros24-ws-multisensory/home"
+    },
+    {
+      "event": "Humanoids 2024 & 2025",
+      "year": "2024–2025",
+      "location": "Related workshop series",
+      "title": "Real World Physical and Social Human-Robot Interaction",
+      "image": "assets/gallery/humanoids-2024-2025.jpg",
+      "width": 1280,
+      "height": 719,
+      "url": "https://rwhri.github.io/Humanoids2024_workshop/"
+    }
   ],
   "editions": [
-    {"year":"2026","conference":"IROS","edition":"05","title":"Sensorimotor-Augmented Teleoperation","url":"https://hyy2566.github.io/iros-workshop-5th-sat-2026/"},
-    {"year":"2025","conference":"IROS","edition":"04","title":"Sensorimotor-Augmented Teleoperation","url":"https://sites.google.com/view/iros-workshop-4th-sat-2025"},
-    {"year":"2025","conference":"ICRA","edition":"03","title":"Human-Centric Multilateral Teleoperation","url":"https://sites.google.com/view/icra-2025-workshop/home"},
-    {"year":"2024","conference":"IROS","edition":"02","title":"Multisensory Transparency-Augmented Teleoperation in Extreme Environments","url":"https://sites.google.com/view/iros24-ws-multisensory/home"},
-    {"year":"2024","conference":"ICRA","edition":"01","title":"Human-Centric Multilateral Teleoperation Augmentation","url":"https://sites.google.com/view/humancentricicra2024/home"}
+    {
+      "year": "2026",
+      "conference": "IROS",
+      "edition": "05",
+      "title": "Sensorimotor-Augmented Teleoperation",
+      "url": "https://hyy2566.github.io/iros-workshop-5th-sat-2026/"
+    },
+    {
+      "year": "2025",
+      "conference": "IROS",
+      "edition": "04",
+      "title": "Sensorimotor-Augmented Teleoperation",
+      "url": "https://sites.google.com/view/iros-workshop-4th-sat-2025"
+    },
+    {
+      "year": "2025",
+      "conference": "ICRA",
+      "edition": "03",
+      "title": "Human-Centric Multilateral Teleoperation",
+      "url": "https://sites.google.com/view/icra-2025-workshop/home"
+    },
+    {
+      "year": "2024",
+      "conference": "IROS",
+      "edition": "02",
+      "title": "Multisensory Transparency-Augmented Teleoperation in Extreme Environments",
+      "url": "https://sites.google.com/view/iros24-ws-multisensory/home"
+    },
+    {
+      "year": "2024",
+      "conference": "ICRA",
+      "edition": "01",
+      "title": "Human-Centric Multilateral Teleoperation Augmentation",
+      "url": "https://sites.google.com/view/humancentricicra2024/home"
+    }
   ]
 }

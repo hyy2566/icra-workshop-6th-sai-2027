@@ -29,3 +29,14 @@ Speaker portraits are from the official profile, laboratory or prior workshop pa
 - wansoo: https://harco.hanyang.ac.kr/images/members/wansoo_kim.png
 - arash: https://iros-2025-ai4roboticsmanufacturing.github.io/images/speakers/arash.jpg (labelled on the IROS 2025 speaker page)
 - marta: https://rwhri.github.io/Humanoids2025_workshop/marta.png (labelled Marta Lagomarsino on the Humanoids 2025 page)
+
+## Organizer portraits
+
+Added on 2026-10-24 for committee identification. The original image bytes are retained; the page presents them in circular frames, as on the IROS 2026 site. Portraits and names link to the individual's profile.
+
+- `organizers/ziwei-wang.jpg`, `zhenyu-lu.jpg`, `parag-khanna.jpg`, `angela-faragasso.jpg` and `eiichi-yoshida.jpg`: reused from their labelled organizer entries on https://hyy2566.github.io/iros-workshop-5th-sat-2026/.
+- `organizers/yiyang-he.jpg`: photograph supplied by Yiyang He for this website. Profile: https://www.lancaster.ac.uk/engineering/about/people/yiyang-he.
+- `organizers/luka-peternel.jpg`: portrait beside the biography on https://www.lukapeternel.nl/.
+- `organizers/amy-han.png`: portrait on https://hero.snu.ac.kr/people/amyhan.
+- `organizers/jee-hwan-ryu.jpg`: image labelled Jee-Hwan Ryu on https://pure.kaist.ac.kr/en/persons/jee-hwan-ryu/.
+- `organizers/changyun-wen.jpg`: portrait on https://personal.ntu.edu.sg/ecywen/bio.htm (`bio_files/image002.jpg`). The workshop affiliation remains as supplied in the revised proposal.

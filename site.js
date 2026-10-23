@@ -1,4 +1,24 @@
 (() => {
+  // Preserve links shared before the site was separated into individual pages.
+  const legacyPages = {
+    speakers: 'speakers.html', programme: 'programme.html',
+    morning: 'programme.html#morning', afternoon: 'programme.html#afternoon',
+    discussion: 'programme.html#discussion', resources: 'programme.html#resources',
+    contribute: 'contributions.html', contributions: 'contributions.html',
+    organizers: 'organizers.html', gallery: 'gallery.html',
+    previous: 'gallery.html#previous', contact: 'contact.html'
+  };
+  const routeLegacyLink = () => {
+    const home = location.pathname.endsWith('/') || location.pathname.endsWith('/index.html');
+    if (!home) return;
+    const key = location.hash.slice(1);
+    const speaker = /^speaker-(arash|monroe|marta|sonia|dongjun|wansoo|chenguang)$/.test(key);
+    const destination = speaker ? `speakers.html#${key}` : legacyPages[key];
+    if (typeof destination === 'string') location.replace(destination);
+  };
+  routeLegacyLink();
+  window.addEventListener('hashchange', routeLegacyLink);
+
   const button = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#main-nav');
   const closeMenu = () => {
@@ -21,19 +41,6 @@
       button.focus();
     }
   });
-  const sections = document.querySelectorAll('main > section[id]');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) if (entry.isIntersecting) {
-        nav.querySelectorAll('a').forEach(link => {
-          if (link.getAttribute('href') === `#${entry.target.id}`) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
-        });
-      }
-    }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
-    sections.forEach(section => observer.observe(section));
-  }
-
   // Real image links remain usable when dialog support or JavaScript is absent.
   const dialog = document.querySelector('.photo-dialog');
   const photos = [...document.querySelectorAll('.gallery-open')];
